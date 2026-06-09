@@ -9,12 +9,16 @@
     <meta property="og:description" content="Atención dental profesional con tecnología moderna y tratamientos especializados.">
     <meta property="og:type" content="website">
     <title>Clínica Smile | Odontología Premium</title>
-    
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://api.iconify.design/fa6-solid:tooth.svg?color=%2300B4D8">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -1117,6 +1121,7 @@
 </head>
 <body>
 
+    <!-- HEADER -->
     <header id="header">
         <div class="container nav-container">
             <a href="#" class="logo">
@@ -1138,6 +1143,7 @@
         </div>
     </header>
 
+    <!-- HERO SECTION -->
     <section id="inicio" class="hero">
         <div class="container hero-container">
             <div class="hero-content reveal-left">
@@ -1171,6 +1177,7 @@
         </div>
     </section>
 
+    <!-- STATS SECTION -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -1194,6 +1201,7 @@
         </div>
     </section>
 
+    <!-- ABOUT SECTION -->
     <section id="nosotros" class="section-padding">
         <div class="container about-grid">
             <div class="about-image reveal-left">
@@ -1214,6 +1222,7 @@
         </div>
     </section>
 
+    <!-- SERVICES SECTION -->
     <section id="servicios" class="section-padding services">
         <div class="container">
             <div class="text-center reveal-up">
@@ -1257,6 +1266,7 @@
         </div>
     </section>
 
+    <!-- BENEFITS SECTION -->
     <section class="section-padding">
         <div class="container">
             <div class="text-center reveal-up">
@@ -1300,6 +1310,7 @@
         </div>
     </section>
 
+    <!-- GALLERY SECTION -->
     <section class="section-padding gallery">
         <div class="container">
             <div class="text-center reveal-up">
@@ -1318,6 +1329,7 @@
         </div>
     </section>
 
+    <!-- TESTIMONIALS SECTION -->
     <section id="testimonios" class="section-padding testimonials">
         <div class="container">
             <div class="text-center reveal-up">
@@ -1371,6 +1383,7 @@
         </div>
     </section>
 
+    <!-- PROCESS SECTION -->
     <section class="section-padding process">
         <div class="container">
             <div class="text-center reveal-up">
@@ -1404,6 +1417,7 @@
         </div>
     </section>
 
+    <!-- CTA SECTION -->
     <section class="cta">
         <div class="container">
             <div class="reveal-up">
@@ -1416,6 +1430,7 @@
         </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section id="contacto" class="section-padding contact">
         <div class="container">
             <div class="text-center reveal-up">
@@ -1482,6 +1497,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1536,15 +1552,18 @@
         </div>
     </footer>
 
+    <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/525587654321" class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- LIGHTBOX OVERLAY -->
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
         <img src="" alt="Gallery Image" id="lightbox-img">
     </div>
 
+    <!-- JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -1592,8 +1611,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // No unobserve for continuous re-animation? 
-                        // Usually better to unobserve for performance.
                         observer.unobserve(entry.target);
                     }
                 });
@@ -1695,9 +1712,6 @@
             // 7. Form Validation (Frontend solo)
             const form = document.getElementById('contactForm');
             form.addEventListener('submit', (e) => {
-                // Prevenimos el submit real para la demo si no hay backend activo,
-                // Pero como tiene formspree, dejaremos que funcione. 
-                // Añadimos solo una pequeña validación visual.
                 const btn = form.querySelector('button');
                 const originalText = btn.innerHTML;
                 
